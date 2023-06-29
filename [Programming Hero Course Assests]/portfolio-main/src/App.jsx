@@ -1,0 +1,35 @@
+import { useEffect } from "react";
+import "./App.css";
+import Navbar from "./Layouts/Navbar";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Hero from "./components/Hero";
+import Banner from "./components/Banner/Banner";
+import Skills from "./components/Skills";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
+
+function App() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1800,
+      offset: 100,
+      disable: "mobile",
+    });
+  }, []);
+
+  return (
+    <div className="">
+      <Navbar></Navbar>
+      {/* <Banner></Banner> */}
+      <Hero></Hero>
+      <Skills></Skills>
+      <Services></Services>
+      <Projects></Projects>
+      <Contact></Contact>
+    </div>
+  );
+}
+
+export default App;
